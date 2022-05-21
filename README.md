@@ -38,6 +38,9 @@ We may now start learning by gradient ascent, which in our case maximizes the lo
 ```julia
 # Run 100 iterations of gradient ascent with learning rate η = 1.
 gradient!(H, S, 100; η = 1)
+
+# Compare log-likelihoods (write ℒ in Julia with \scrL).
+println("ℒ(T, S) = ", ℒ(T, S), "\nℒ(H, S) = ", ℒ(H, S))
 ```
 
 We could do the same with `[θ, ∞)` as the support. We only have to set it accordingly when
